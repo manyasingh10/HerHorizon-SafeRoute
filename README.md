@@ -53,7 +53,7 @@ The user can enter a secret code to unlock the SafeRoute portal.
 Example:
 
 ```text
-98.6+=
+999
 ```
 
 The secret code can also be changed and stored locally.
