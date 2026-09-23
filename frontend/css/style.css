@@ -121,8 +121,19 @@ select:focus-visible{ outline:none;
 
 /* ---------- PORTAL SHELL ---------- */
 
-#haven-persona{display:none;min-height:100vh;flex-direction:column}
-.utility-bar{background:#14101f;color:#b9b2cc;font-size:12.5px;padding:8px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+#haven-persona{display:none;
+               min-height:100vh;
+               flex-direction:column}
+
+.utility-bar{background:#14101f;
+             color:#b9b2cc;
+             font-size:12.5px;
+             padding:8px 20px;
+             display:flex;
+             justify-content:space-between;
+             align-items:center;
+             gap:12px;
+             flex-wrap:wrap}
 .utility-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .live-dot{width:8px;height:8px;border-radius:50%;background:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,.18)}
 .utility-actions{display:flex;gap:8px}
