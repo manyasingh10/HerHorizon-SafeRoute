@@ -167,9 +167,20 @@ select:focus-visible{ outline:none;
 .btn-primary{background:var(--primary);
              color:#fff} .btn-primary:hover{background:var(--primary-dark)}
 
-.btn-dark{background:#1e1830;color:#fff} .btn-dark:hover{background:#2c2347}
-.btn-success{background:var(--success);color:#fff} .btn-danger{background:var(--danger);color:#fff} .btn-danger:hover{filter:brightness(.94)}
-.btn-outline-light{background:transparent;border-color:rgba(255,255,255,.22);color:#fff}
+.btn-dark{background:#1e1830;
+          color:#fff} .btn-dark:hover{background:#2c2347}
+
+.btn-success{background:var(--success);
+             color:#fff} 
+
+.btn-danger{background:var(--danger);
+            color:#fff} 
+
+.btn-danger:hover{filter:brightness(.94)}
+
+.btn-outline-light{background:transparent;
+                   border-color:rgba(255,255,255,.22);
+                   color:#fff}
 .top-nav{background:#fff;border-bottom:1px solid var(--line);padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;position:sticky;top:0;z-index:800}
 .brand{display:flex;align-items:center;gap:10px}
 .brand-mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--primary),#3b1470);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
