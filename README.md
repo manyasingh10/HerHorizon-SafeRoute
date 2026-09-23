@@ -1,50 +1,204 @@
-# 🛡️ The Shelter Nobody Could Find in Time
+# HerHorizon
 
-> **A privacy-first, discreet emergency-support platform that helps people find available shelters and safer transport without openly revealing what they are searching for.**
+### The Shelter Nobody Could Find in Time
 
----
+HerHorizon is a safety-focused web application designed to help a person in an emergency quickly find nearby shelters, check available beds, access safer transportation, share location with trusted contacts, and use emergency safety tools.
 
-## 🚨 Problem Statement
-
-A domestic violence survivor trying to leave a dangerous situation may have only a small window of time to escape safely.
-
-But finding immediate help is difficult.
-
-They may not know:
-
-* 🏠 Which nearby shelter currently has a free bed
-* 📍 Where they can safely go
-* 🚗 How to reach the shelter
-* 🚌 Which transport options are available
-* ⏱️ Whether the information is still current
-
-There is another serious problem:
-
-### **Searching for help can itself create risk.**
-
-On a shared or monitored phone, an obvious shelter website, app name, browser title, search result, or saved page may reveal that someone has been looking for help.
-
-This can potentially expose the person to further danger.
+The application is designed with a calculator-style interface as the initial screen so that the safety features are not immediately visible.
 
 ---
 
-# 💡 Our Solution
+## Features
 
-**The Shelter Nobody Could Find in Time** is a **discreet, privacy-first shelter discovery platform**.
+### 🔢 Disguised Calculator
 
-It combines:
+The application initially opens as a normal calculator.
 
-> 🔐 **Discreet Disguise**
-> 🏠 **Real-Time Shelter Availability**
-> 🗺️ **Safer Transport Options**
-> 🆘 **Emergency Support**
-
-The key idea is:
-
-### **The user should be able to look for help without the interface openly announcing what they are looking for.**
+- Basic calculator operations
+- Calculator-style interface
+- Hidden SafeRoute access
+- Custom stealth passcode
+- Passcode stored locally in the browser
+- Quick exit back to the calculator screen
 
 ---
 
+### 🏠 Emergency Shelters
+
+Users can view available shelters and their information.
+
+The shelter interface includes:
+
+- Available beds
+- Family units
+- Shelter location
+- Security information
+- Distance from the user's location
+- Accessibility information
+- Pet-friendly shelters
+- Nearby and farther shelter options
+- Bed reservation / temporary hold
+
+The application includes sample shelter data for demonstration.
+
+---
+
+### 📍 GPS Location
+
+HerHorizon can use the browser's GPS functionality to determine the user's current location.
+
+The GPS section provides:
+
+- Latitude
+- Longitude
+- Accuracy
+- Live GPS status
+- Automatic pickup location
+- Location refresh
+- Map centering
+
+If GPS is unavailable, the application can continue using the last known/sample location.
+
+---
+
+### 🗺️ Safety Map
+
+The map interface uses Leaflet.
+
+It can display:
+
+- User location
+- Shelter locations
+- Guard kiosks
+- Safety corridors
+- Direct routes
+- Location accuracy radius
+
+The application also provides an offline/fallback state when the map service is unavailable.
+
+---
+
+### 🚗 Safe Transportation
+
+Users can select a shelter and request a safe ride.
+
+The transportation system includes:
+
+- Shelter destination selection
+- Safe ride request
+- Driver verification
+- Single matching PIN
+- Driver PIN display
+- Passenger verification
+- Free ride/voucher flow
+- Transit simulation
+
+The same verification PIN is displayed to the passenger and driver for matching.
+
+---
+
+### 👥 Trusted Guardians
+
+Users can view trusted contacts such as:
+
+- Family members
+- Advocates
+- Escort units
+
+Available actions include:
+
+- Call
+- Ping
+- Location sharing
+
+---
+
+### 🆘 Emergency / SOS
+
+The SOS system provides an emergency interface containing:
+
+- Current coordinates
+- GPS accuracy
+- Battery information
+- Emergency broadcast
+
+The interface also contains additional emergency tools such as:
+
+- Silent beacon
+- Siren
+- Visual strobe
+- Fake call
+- Guardian broadcast
+
+---
+
+### 💬 Support Chat
+
+The support section provides a simple emergency support chat interface.
+
+It can help users with:
+
+- Shelter requests
+- Transportation
+- Counseling
+- Callback requests
+- Emergency support
+
+The interface also provides quick-action buttons for common requests.
+
+---
+
+### 🛡️ Safety & Privacy
+
+The project focuses on minimizing the visibility of help-seeking activity.
+
+The interface includes:
+
+- Calculator-style disguise
+- Stealth passcode
+- Quick exit
+- Silent emergency tools
+- Disguised callback functionality
+- Location sharing with trusted contacts
+
+> **Important:** This project is a prototype/demo. The current implementation should not be treated as a production-grade secure or anonymous emergency service.
+
+---
+
+# Project Structure
+
+```text
+HerHorizon/
+│
+├── frontend/
+│   ├── index.html
+│   │
+│   ├── css/
+│   │   └── style.css
+│   │
+│   └── src/
+│       ├── state.js
+│       ├── calculator.js
+│       ├── ui.js
+│       ├── gps.js
+│       ├── map.js
+│       ├── shelters.js
+│       ├── transit.js
+│       ├── support.js
+│       ├── admin.js
+│       ├── stealth.js
+│       └── safety.js
+│
+├── backend/
+│   ├── herhorizon.py
+│   ├── requirements.txt
+│   └── ...
+│
+├── assets/
+│   └── icons/
+│
+├── README.md
+└── .gitignore
 # 🔐 THE CORE INNOVATION — DISCREET DISGUISE
 
 Unlike a normal shelter directory, our platform is designed to **hide the sensitive purpose of the service during ordinary inspection of the device**.
