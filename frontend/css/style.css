@@ -1,19 +1,52 @@
 :root{
-  --primary:#6d28d9; --primary-dark:#5b21b6; --primary-50:#f5f1ff; --primary-100:#ede9fe;
-  --ink:#17131f; --muted:#6b657a; --line:#e7e2f2; --bg:#f7f5fb; --surface:#ffffff;
-  --success:#15803d; --success-bg:#dcfce7; --warn:#b45309; --warn-bg:#fef3c7;
-  --danger:#dc2626; --danger-bg:#fee2e2; --info:#0369a1; --info-bg:#e0f2fe;
-  --radius:14px; --shadow-sm:0 1px 2px rgba(23,19,31,.06); --shadow:0 8px 24px rgba(23,19,31,.08); --shadow-lg:0 20px 48px rgba(23,19,31,.18);
-  --calc-bg:#16161c; --calc-panel:#1f1f27; --calc-btn:#2a2a35; --calc-op:#c77d0a;
+  --primary:#6d28d9; 
+  --primary-dark:#5b21b6; 
+  --primary-50:#f5f1ff; 
+  --primary-100:#ede9fe;
+  --ink:#17131f; 
+  --muted:#6b657a; 
+  --line:#e7e2f2; 
+  --bg:#f7f5fb; 
+  --surface:#ffffff;
+  --success:#15803d; 
+  --success-bg:#dcfce7; 
+  --warn:#b45309; 
+  --warn-bg:#fef3c7;
+  --danger:#dc2626; 
+  --danger-bg:#fee2e2; 
+  --info:#0369a1; 
+  --info-bg:#e0f2fe;
+  --radius:14px; 
+  --shadow-sm:0 1px 2px rgba(23,19,31,.06); 
+  --shadow:0 8px 24px rgba(23,19,31,.08); 
+  --shadow-lg:0 20px 48px rgba(23,19,31,.18);
+  --calc-bg:#16161c; 
+  --calc-panel:#1f1f27; 
+  --calc-btn:#2a2a35; 
+  --calc-op:#c77d0a;
 }
-*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+
+*{ box-sizing:border-box;margin:0;padding:0;
+  -webkit-tap-highlight-color:transparent
+ }
 html,body{height:100%}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);font-size:14.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body {
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);font-size:14.5px;line-height:1.5;
+  -webkit-font-smoothing:antialiased
+}
 button{font-family:inherit}
-button:focus-visible,input:focus-visible,select:focus-visible{outline:none;outline:2px solid var(--primary);outline-offset:2px}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible{outline:none;outline:2px solid var(--primary); outline-offset:2p}
 
 /* ---------- CALCULATOR (discreet) ---------- */
-.calc-stage{min-height:100vh;background:radial-gradient(900px 500px at 50% -10%,#26262f 0%,var(--calc-bg) 60%);display:flex;align-items:center;justify-content:center;padding:24px}
+
+.calc-stage { min-height:100vh;
+              background:radial-gradient(900px 500px at 50% -10%,#26262f 0%,var(--calc-bg) 60%);
+              display:flex;align-items:center;
+             justify-content:center;padding:24px
+           }
 #calculator-persona{width:min(400px,100%);background:#1c1c22;border:1px solid #2c2c36;border-radius:28px;padding:22px 18px 20px;box-shadow:var(--shadow-lg)}
 .calc-status{display:flex;justify-content:space-between;color:#8b8b9a;font-size:12px;font-weight:600;letter-spacing:.02em;padding:4px 6px 18px}
 .calc-screen{background:#101014;border:1px solid #2a2a34;border-radius:18px;padding:18px 16px 14px;margin-bottom:18px;text-align:right;min-height:112px;display:flex;flex-direction:column;justify-content:flex-end}
