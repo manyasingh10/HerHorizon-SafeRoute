@@ -224,6 +224,21 @@ HerHorizon/
 * Speech Synthesis API
 * Local Storage
 
+### Backend
+
+🚧 **Currently in Development**
+
+The backend is currently being developed. It will handle:
+
+* Shelter and bed availability data
+* User and guardian information
+* SOS and emergency requests
+* Safe transportation requests
+* Database management
+* API communication with the frontend
+
+The current MVP primarily demonstrates the **frontend functionality and user experience** using prototype/simulated data.
+
 ---
 
 ## 📂 JavaScript Modules
@@ -251,7 +266,7 @@ HerHorizon/
 Open:
 
 ```text
-frontend/index.html
+frontend/herhorizon2.html
 ```
 
 in a browser.
@@ -261,7 +276,7 @@ in a browser.
 Using VS Code, install **Live Server** and open:
 
 ```text
-frontend/index.html
+frontend/herhorizon2.html
 ```
 
 with Live Server.
