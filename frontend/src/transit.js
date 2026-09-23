@@ -1,0 +1,9 @@
+/* HerHorizon safe transit and verification token flow. */
+/* transit */
+function resetRideIdle(){const c=$('driverDetailsCard');if(c){c.classList.remove('show');c.style.display='';}if($('unifiedPIN'))$('unifiedPIN').textContent='····';if($('driverSpokenPin'))$('driverSpokenPin').textContent='····';if($('rideStatusBadge'))$('rideStatusBadge').textContent='Awaiting request';if($('rideStatusHint'))$('rideStatusHint').textContent='No active ride. Select a shelter and press “Request & verify safe ride” to generate your single matching token.';}
+function dispatchSafeTransit(){const sel=$('txDestinationSelect');const dest=sel?sel.value:'';const card=$('driverDetailsCard');if(!dest){toast('Please select a safe shelter first.');return;}const singlePin=Math.floor(1000+Math.random()*9000);$('unifiedPIN').textContent=singlePin;$('driverSpokenPin').textContent=singlePin;if($('rideStatusBadge'))$('rideStatusBadge').textContent='Ride confirmed';if($('rideStatusHint'))$('rideStatusHint').textContent='Driver and passenger share this one matching token. Only enter after the driver states it aloud.';if(card){card.style.display='';card.classList.add('show');card.scrollIntoView({behavior:'smooth',block:'nearest'});}toast('Ride requested to '+dest+'. Driver verification completed.');}
+$('btnDispatch').onclick=dispatchSafeTransit;
+$('txDestinationSelect').addEventListener('change',resetRideIdle);
+$('btnFarRide').onclick=()=>{showTab('view-transit',document.querySelector('[data-view="view-transit"]'));$('txDestinationSelect').value='Harbor Sanctuary Point';resetRideIdle();dispatchSafeTransit();};
+$('btnVoucherTop').onclick=()=>$('transitPassModal').classList.add('show');
+$('btnClaimPass').onclick=()=>{$('transitPassModal').classList.remove('show');showTab('view-transit',document.querySelector('[data-view="view-transit"]'));toast('Voucher applied — press Request to confirm ride');};
