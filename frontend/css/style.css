@@ -134,13 +134,39 @@ select:focus-visible{ outline:none;
              align-items:center;
              gap:12px;
              flex-wrap:wrap}
-.utility-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.live-dot{width:8px;height:8px;border-radius:50%;background:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,.18)}
+
+.utility-left{display:flex;
+              align-items:center;
+              gap:10px;flex-wrap:wrap}
+.live-dot{width:8px;
+          height:8px;
+          border-radius:50%;
+          background:#10b981;
+          box-shadow:0 0 0 3px rgba(16,185,129,.18)}
+
 .utility-actions{display:flex;gap:8px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;border-radius:9px;padding:9px 14px;font-size:13.5px;font-weight:600;border:1px solid transparent;cursor:pointer;transition:all .15s;text-decoration:none;white-space:nowrap}
-.btn-sm{padding:6px 11px;font-size:12.5px}
-.btn-ghost{background:#fff;border-color:var(--line);color:#3a334e} .btn-ghost:hover{border-color:var(--primary);color:var(--primary)}
-.btn-primary{background:var(--primary);color:#fff} .btn-primary:hover{background:var(--primary-dark)}
+
+.btn{display:inline-flex;
+     align-items:center;
+     justify-content:center;
+     gap:7px;border-radius:9px;
+     padding:9px 14px;font-size:13.5px;
+     font-weight:600;
+     border:1px solid transparent;
+     cursor:pointer;
+     transition:all .15s;
+     text-decoration:none;
+     white-space:nowrap}
+
+.btn-sm{padding:6px 11px;
+        font-size:12.5px}
+
+.btn-ghost{background:#fff;
+           border-color:var(--line);color:#3a334e} .btn-ghost:hover{border-color:var(--primary);color:var(--primary)}
+
+.btn-primary{background:var(--primary);
+             color:#fff} .btn-primary:hover{background:var(--primary-dark)}
+
 .btn-dark{background:#1e1830;color:#fff} .btn-dark:hover{background:#2c2347}
 .btn-success{background:var(--success);color:#fff} .btn-danger{background:var(--danger);color:#fff} .btn-danger:hover{filter:brightness(.94)}
 .btn-outline-light{background:transparent;border-color:rgba(255,255,255,.22);color:#fff}
