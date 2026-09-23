@@ -1,0 +1,15 @@
+/* simulation + broadcast */
+$('btnSimulate').onclick=()=>{S.simOn?stopSim():startSim();};
+function startSim(){clearInterval(S.simTimer);S.simOn=true;S.simStep=0;$('btnSimulate').textContent='Pause escort simulation';const{lat,lng}=S.coords;const path=[[lat,lng],[lat-.0012,lng-.0008],[lat-.0024,lng-.0016],[lat-.0048,lng-.0022],[lat-.0072,lng-.003],[lat-.0094,lng-.0034]];
+  S.simTimer=setInterval(()=>{S.simStep++;if(S.simStep>=path.length){stopSim();$('btnSimulate').textContent='Restart escort simulation';toast('Arrived at shelter perimeter');return;}const[pla,plo]=path[S.simStep];S.coords.lat=pla;S.coords.lng=plo;paintCoords(S.hasGPS);try{if(S.userMarker){S.userMarker.setLatLng(path[S.simStep]);S.accCircle.setLatLng(path[S.simStep]);S.map?.panTo(path[S.simStep]);}}catch{}},1900);}
+function stopSim(){clearInterval(S.simTimer);S.simOn=false;$('btnSimulate').textContent='Resume escort simulation';}
+document.querySelectorAll('[data-broadcast]').forEach(b=>b.onclick=()=>{let la=S.coords.lat,lo=S.coords.lng;try{if(S.userMarker){const p=S.userMarker.getLatLng();la=p.lat;lo=p.lng;}}catch{}toast(`GPS ${Number(la).toFixed(5)}, ${Number(lo).toFixed(5)} sent to guardians`);});
+
+/* transit */
+function resetRideIdle(){const c=$('driverDetailsCard');if(c){c.classList.remove('show');c.style.display='';}if($('unifiedPIN'))$('unifiedPIN').textContent='····';if($('driverSpokenPin'))$('driverSpokenPin').textContent='····';if($('rideStatusBadge'))$('rideStatusBadge').textContent='Awaiting request';if($('rideStatusHint'))$('rideStatusHint').textContent='No active ride. Select a shelter and press “Request & verify safe ride” to generate your single matching token.';}
+function dispatchSafeTransit(){const sel=$('txDestinationSelect');const dest=sel?sel.value:'';const card=$('driverDetailsCard');if(!dest){toast('Please select a safe shelter first.');return;}const singlePin=Math.floor(1000+Math.random()*9000);$('unifiedPIN').textContent=singlePin;$('driverSpokenPin').textContent=singlePin;if($('rideStatusBadge'))$('rideStatusBadge').textContent='Ride confirmed';if($('rideStatusHint'))$('rideStatusHint').textContent='Driver and passenger share this one matching token. Only enter after the driver states it aloud.';if(card){card.style.display='';card.classList.add('show');card.scrollIntoView({behavior:'smooth',block:'nearest'});}toast('Ride requested to '+dest+'. Driver verification completed.');}
+$('btnDispatch').onclick=dispatchSafeTransit;
+$('txDestinationSelect').addEventListener('change',resetRideIdle);
+$('btnFarRide').onclick=()=>{showTab('view-transit',document.querySelector('[data-view="view-transit"]'));$('txDestinationSelect').value='Harbor Sanctuary Point';resetRideIdle();dispatchSafeTransit();};
+$('btnVoucherTop').onclick=()=>$('transitPassModal').classList.add('show');
+$('btnClaimPass').onclick=()=>{$('transitPassModal').classList.remove('show');showTab('view-transit',document.querySelector('[data-view="view-transit"]'));toast('Voucher applied — press Request to confirm ride');};
