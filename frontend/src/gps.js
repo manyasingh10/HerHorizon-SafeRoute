@@ -1,8 +1,0 @@
-/* HerHorizon GPS acquisition and coordinate display. */
-/* GPS */
-let _lastMarkerUpdate=0;
-function startGPS(){if(!('geolocation' in navigator)){paintCoords(false);return;}S.watchId=navigator.geolocation.watchPosition(p=>{S.hasGPS=true;S.coords={lat:p.coords.latitude,lng:p.coords.longitude,acc:Math.round(p.coords.accuracy||15)};paintCoords(true);moveMapLight();recomputeList();},()=>{paintCoords(false);recomputeList();},{enableHighAccuracy:true,timeout:10000,maximumAge:5000});}
-$('btnGPS').onclick=()=>{toast('Polling GPS…');navigator.geolocation?.getCurrentPosition(p=>{S.coords={lat:p.coords.latitude,lng:p.coords.longitude,acc:Math.round(p.coords.accuracy||15)};paintCoords(true);moveMap();recompute();centerUser();toast('GPS refreshed');},()=>toast('Signal unavailable · keeping last fix'));};
-$('btnCenter').onclick=centerUser;
-$('linkSample').onclick=e=>{e.preventDefault();S.coords={lat:19.250904,lng:73.142782,acc:12};paintCoords(true);moveMap();recompute();toast('Sample city mesh loaded');};
-function paintCoords(live){const{lat,lng,acc}=S.coords;$('lblLat').textContent=lat.toFixed(6);$('lblLng').textContent=lng.toFixed(6);$('lblAcc').textContent=`±${acc} m`;$('gpsModeBadge').textContent=live?'Satellite lock':'Last known';const s=`${lat.toFixed(5)}, ${lng.toFixed(5)}`;$('txPickupPoint').value=`${s} · auto-detected`;$('guardianPingPreview').textContent=`"Safe on corridor · ${s}"`;$('sosCoords').textContent=s;$('sosAcc').textContent=`±${acc} m`;if(live)$('topBarGPSStatus').textContent=`Live GPS · ±${acc}m`;}
