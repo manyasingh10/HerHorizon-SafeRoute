@@ -63,7 +63,6 @@ select:focus-visible{ outline:none;
              font-weight:600;
              letter-spacing:.02em;
              padding:4px 6px 18px}
-
 .calc-screen{background:#101014;
              border:1px solid #2a2a34;
              border-radius:18px;padding:18px 16px 14px;
@@ -71,14 +70,12 @@ select:focus-visible{ outline:none;
              min-height:112px;
              display:flex;flex-direction:column;
              justify-content:flex-end}
-
 .calc-history{color:#7a7a8c;
               font-size:14px;
               min-height:20px;
               white-space:nowrap;
               overflow:hidden;
               text-overflow:ellipsis}
-
 .calc-val{color:#fff;font-size:52px;
           font-weight:300;
           letter-spacing:-1.5px;
@@ -86,9 +83,7 @@ select:focus-visible{ outline:none;
           white-space:nowrap;
           overflow-x:auto;
           scrollbar-width:none}
-
 .calc-val::-webkit-scrollbar{display:none}
-
 .calc-grid{display:grid;
            grid-template-columns:repeat(4,1fr);
            gap:10px}
@@ -100,13 +95,10 @@ select:focus-visible{ outline:none;
        cursor:pointer;display:flex;align-items:center;
        justify-content:center;
        transition:transform .08s,filter .12s}
-
 .c-btn:hover{filter:brightness(1.12)} .c-btn:active{transform:scale(.96)}
-
 .c-btn.span-2{grid-column:span 2;
               justify-content:flex-start;
               padding-left:26px}
-
 .c-btn.fn{background:#a8a8b3;
           color:#111;
           font-size:19px;
@@ -134,10 +126,10 @@ select:focus-visible{ outline:none;
              align-items:center;
              gap:12px;
              flex-wrap:wrap}
-
 .utility-left{display:flex;
               align-items:center;
               gap:10px;flex-wrap:wrap}
+
 .live-dot{width:8px;
           height:8px;
           border-radius:50%;
@@ -157,27 +149,19 @@ select:focus-visible{ outline:none;
      transition:all .15s;
      text-decoration:none;
      white-space:nowrap}
-
 .btn-sm{padding:6px 11px;
         font-size:12.5px}
-
 .btn-ghost{background:#fff;
            border-color:var(--line);color:#3a334e} .btn-ghost:hover{border-color:var(--primary);color:var(--primary)}
-
 .btn-primary{background:var(--primary);
              color:#fff} .btn-primary:hover{background:var(--primary-dark)}
-
 .btn-dark{background:#1e1830;
           color:#fff} .btn-dark:hover{background:#2c2347}
-
 .btn-success{background:var(--success);
              color:#fff} 
-
 .btn-danger{background:var(--danger);
             color:#fff} 
-
 .btn-danger:hover{filter:brightness(.94)}
-
 .btn-outline-light{background:transparent;
                    border-color:rgba(255,255,255,.22);
                    color:#fff}
@@ -197,7 +181,6 @@ select:focus-visible{ outline:none;
 .brand{display:flex;
        align-items:center;
        gap:10px}
-
 .brand-mark{width:36px;
             height:36px;
             border-radius:10px;
@@ -207,11 +190,9 @@ select:focus-visible{ outline:none;
             align-items:center;
             justify-content:center;
             font-weight:800}
-
 .brand-name{font-size:18px;
             font-weight:800;
             letter-spacing:-.3px}
-
 .brand-sub{font-size:11px;
            font-weight:700;
            color:var(--primary);
@@ -226,7 +207,6 @@ select:focus-visible{ outline:none;
       gap:4px;
       flex-wrap:wrap;
       align-items:center}
-
 .tab{border:0;
      background:transparent;
      padding:8px 13px;
@@ -235,17 +215,13 @@ select:focus-visible{ outline:none;
      font-weight:600;
      color:#5b5470;
      cursor:pointer}
-
 .tab:hover{background:var(--primary-50);
            color:var(--primary-dark)}
-
 .tab.active{background:var(--ink);
             color:#fff}
-
 .tab.admin{border:1px solid #bae6fd;
            background:#f0f9ff;
            color:var(--info)} 
-
 .tab.admin.active{background:var(--info);
                   color:#fff}
 
@@ -257,11 +233,8 @@ select:focus-visible{ outline:none;
       margin:0 auto;
       padding:28px 24px 64px;
       width:100%}
-
 .view.active{display:block}
-
 .view-head{margin-bottom:20px} 
-
 .view-head h2{font-size:26px;
               font-weight:800;
               letter-spacing:-.5px} 
@@ -282,10 +255,8 @@ select:focus-visible{ outline:none;
         align-items:center;
         margin-bottom:20px;
         box-shadow:var(--shadow)}
-
 .banner h3{font-size:20px;
            font-weight:800} 
-
 .banner .eyebrow{font-size:11px;
                  font-weight:700;
                  text-transform:uppercase;
@@ -296,15 +267,48 @@ select:focus-visible{ outline:none;
        gap:26px;
        flex-wrap:wrap;
        align-items:center}
+.stat b{display:block;
+        font-size:26px;
+        font-weight:800;
+        color:#6ee7b7;
+        line-height:1} 
+.stat span{font-size:11px;
+           font-weight:700;
+           text-transform:uppercase;
+           letter-spacing:.5px;
+           color:#d6cdea}
 
-.stat b{display:block;font-size:26px;font-weight:800;color:#6ee7b7;line-height:1} .stat span{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#d6cdea}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow-sm)}
+.card{background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow-sm)}
 .card + .card{margin-top:14px}
-.card-title{font-size:14.5px;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:6px}
-.muted{color:var(--muted)} .small{font-size:12.5px}
-.grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:20px} @media(max-width:900px){.grid-2{grid-template-columns:1fr}}
-.grid-3{display:flex;gap:16px;overflow-x:auto;padding-bottom:10px;scroll-snap-type:x mandatory;align-items:stretch}
-.grid-3>.card{margin-top:0!important;flex:0 0 340px;max-width:340px;scroll-snap-align:start}
+.card-title{font-size:14.5px;
+            font-weight:700;
+            display:flex;
+            align-items:center;
+            gap:8px;
+            margin-bottom:6px}
+
+.muted{color:var(--muted)} 
+
+.small{font-size:12.5px}
+
+.grid-2{display:grid;
+        grid-template-columns:1.1fr .9fr;
+        gap:20px} 
+@media(max-width:900px){.grid-2{grid-template-columns:1fr}}
+.grid-3{display:flex;
+        gap:16px;
+        overflow-x:auto;
+        padding-bottom:10px;
+        scroll-snap-type:x mandatory;
+        align-items:stretch}
+.grid-3>.card{margin-top:0!important;
+              flex:0 0 340px;
+              max-width:340px;
+              scroll-snap-align:start}
 .tools>.card{margin-top:0!important}
 @media(max-width:640px){.grid-3>.card{flex-basis:86vw;max-width:86vw}}
 
