@@ -1,177 +1,190 @@
-# HerHorizon
+# HerHorizon – SafeRoute
+
+## 🛡️ About the Project
+
+**HerHorizon – SafeRoute** is a discreet safety web application designed to help people in unsafe domestic situations find **nearby shelters, safe transportation, emergency support, and trusted contacts** without attracting attention.
+
+The application is disguised as a **normal calculator**. A user can enter a secret code to discreetly access the safety portal.
+
+---
+
+## 🚨 Problem Statement
 
 ### The Shelter Nobody Could Find in Time
 
-HerHorizon is a safety-focused web application designed to help a person in an emergency quickly find nearby shelters, check available beds, access safer transportation, share location with trusted contacts, and use emergency safety tools.
+A person trying to leave an unsafe domestic situation may lose critical time because they do not know:
 
-The application is designed with a calculator-style interface as the initial screen so that the safety features are not immediately visible.
+* Which nearby shelter has available beds
+* Which route is safer
+* How to arrange safe transportation
+* How to quickly contact trusted people
+* How to share their location during an emergency
 
----
-
-## Features
-
-### 🔢 Disguised Calculator
-
-The application initially opens as a normal calculator.
-
-- Basic calculator operations
-- Calculator-style interface
-- Hidden SafeRoute access
-- Custom stealth passcode
-- Passcode stored locally in the browser
-- Quick exit back to the calculator screen
+HerHorizon brings these features together in one discreet platform.
 
 ---
 
-### 🏠 Emergency Shelters
+## 💡 Solution
 
-Users can view available shelters and their information.
+HerHorizon provides a discreet **SafeRoute portal** with:
 
-The shelter interface includes:
-
-- Available beds
-- Family units
-- Shelter location
-- Security information
-- Distance from the user's location
-- Accessibility information
-- Pet-friendly shelters
-- Nearby and farther shelter options
-- Bed reservation / temporary hold
-
-The application includes sample shelter data for demonstration.
-
----
-
-### 📍 GPS Location
-
-HerHorizon can use the browser's GPS functionality to determine the user's current location.
-
-The GPS section provides:
-
-- Latitude
-- Longitude
-- Accuracy
-- Live GPS status
-- Automatic pickup location
-- Location refresh
-- Map centering
-
-If GPS is unavailable, the application can continue using the last known/sample location.
+* 🏠 Real-time shelter availability
+* 📍 GPS location tracking
+* 🗺️ Interactive map
+* 🚗 Safe transport and escort simulation
+* 🆘 SOS emergency button
+* 👥 Trusted guardians
+* 💬 Support chat
+* 📡 Location broadcasting
+* 🔐 Secret access code
+* 🧮 Calculator disguise
+* 📞 Fake call feature
+* 🚨 Siren and visual strobe
+* 🛡️ Admin shelter management
 
 ---
 
-### 🗺️ Safety Map
+## 🔐 Discreet Access
 
-The map interface uses Leaflet.
+The application initially appears as a **calculator**.
 
-It can display:
+The user can enter a secret code to unlock the SafeRoute portal.
 
-- User location
-- Shelter locations
-- Guard kiosks
-- Safety corridors
-- Direct routes
-- Location accuracy radius
+Example:
 
-The application also provides an offline/fallback state when the map service is unavailable.
+```text
+98.6+=
+```
 
----
+The secret code can also be changed and stored locally.
 
-### 🚗 Safe Transportation
+To quickly return to the calculator disguise:
 
-Users can select a shelter and request a safe ride.
+```text
+Escape
+```
 
-The transportation system includes:
-
-- Shelter destination selection
-- Safe ride request
-- Driver verification
-- Single matching PIN
-- Driver PIN display
-- Passenger verification
-- Free ride/voucher flow
-- Transit simulation
-
-The same verification PIN is displayed to the passenger and driver for matching.
+or use the disguise/exit button.
 
 ---
 
-### 👥 Trusted Guardians
+## ✨ Main Features
 
-Users can view trusted contacts such as:
+### 1. Shelter Finder
 
-- Family members
-- Advocates
-- Escort units
+Displays nearby shelters with information such as:
 
-Available actions include:
-
-- Call
-- Ping
-- Location sharing
-
----
-
-### 🆘 Emergency / SOS
-
-The SOS system provides an emergency interface containing:
-
-- Current coordinates
-- GPS accuracy
-- Battery information
-- Emergency broadcast
-
-The interface also contains additional emergency tools such as:
-
-- Silent beacon
-- Siren
-- Visual strobe
-- Fake call
-- Guardian broadcast
+* Shelter name
+* Location
+* Available beds
+* Family units
+* Security information
+* Distance
+* Accessibility options
 
 ---
 
-### 💬 Support Chat
+### 2. GPS & Location
 
-The support section provides a simple emergency support chat interface.
+The application can use the browser's GPS to show:
 
-It can help users with:
+* Current latitude
+* Current longitude
+* GPS accuracy
+* Live location
+* Last known location
 
-- Shelter requests
-- Transportation
-- Counseling
-- Callback requests
-- Emergency support
-
-The interface also provides quick-action buttons for common requests.
+Users can also load a sample location for demonstration.
 
 ---
 
-### 🛡️ Safety & Privacy
+### 3. Interactive Map
 
-The project focuses on minimizing the visibility of help-seeking activity.
+The map displays:
 
-The interface includes:
+* User location
+* Shelters
+* Guardian/patrol locations
+* Safe corridors
+* Direct routes
+* Radius filters
 
-- Calculator-style disguise
-- Stealth passcode
-- Quick exit
-- Silent emergency tools
-- Disguised callback functionality
-- Location sharing with trusted contacts
-
-> **Important:** This project is a prototype/demo. The current implementation should not be treated as a production-grade secure or anonymous emergency service.
+The application also provides a fallback message if the map is unavailable.
 
 ---
 
-# Project Structure
+### 4. Safe Transportation
+
+Users can select a shelter and request safe transportation.
+
+A **single verification PIN** is generated and shared between the passenger and driver.
+
+The ride confirmation interface displays:
+
+```text
+Ride Confirmed
+Driver Verification Completed
+Matching PIN
+```
+
+---
+
+### 5. SOS Emergency
+
+The SOS feature provides emergency information such as:
+
+* Current coordinates
+* GPS accuracy
+* Battery level
+* Emergency broadcast
+
+The system can simulate broadcasting the SOS to guardians and patrol support.
+
+---
+
+### 6. Trusted Guardians
+
+The application includes trusted contacts such as:
+
+* Family members
+* Advocates
+* Safety patrol/escort units
+
+Location updates can be broadcast to these contacts.
+
+---
+
+### 7. Support Chat
+
+The support section provides quick assistance through:
+
+* Emergency support
+* Shelter-related help
+* Transport assistance
+* Quick questions
+* Support resources
+
+---
+
+### 8. Safety Tools
+
+HerHorizon includes discreet safety tools such as:
+
+* Fake calculator interface
+* Fake call
+* Emergency siren
+* Visual strobe
+* Location broadcasting
+* Quick exit
+
+---
+
+## 🏗️ Project Structure
 
 ```text
 HerHorizon/
 │
 ├── frontend/
-│   ├── index.html
 │   │
 │   ├── css/
 │   │   └── style.css
@@ -179,621 +192,168 @@ HerHorizon/
 │   └── src/
 │       ├── state.js
 │       ├── calculator.js
-│       ├── ui.js
+│       ├── stealth.js
 │       ├── gps.js
 │       ├── map.js
 │       ├── shelters.js
 │       ├── transit.js
 │       ├── support.js
 │       ├── admin.js
-│       ├── stealth.js
-│       └── safety.js
-│
-├── backend/
-│   ├── herhorizon.py
-│   ├── requirements.txt
-│   └── ...
+│       ├── safety.js
+│       └── ui.js
 │
 ├── assets/
-│   └── icons/
+│   └── .getkeep
 │
 ├── README.md
 └── .gitignore
-# 🔐 THE CORE INNOVATION — DISCREET DISGUISE
-
-Unlike a normal shelter directory, our platform is designed to **hide the sensitive purpose of the service during ordinary inspection of the device**.
-
-Instead of presenting itself as:
-
-> ❌ "Domestic Violence Shelter Finder"
-
-the visible experience can resemble an ordinary utility such as:
-
-> **Daily Planner / Travel Assistant / Personal Organizer**
-
-The protected assistance functionality is accessed through a discreet interaction.
-
-### Example
-
-```text
-┌─────────────────────────────┐
-│       DAILY PLANNER         │
-│                             │
-│  Today's Tasks              │
-│                             │
-│  □ College                  │
-│  □ Shopping                 │
-│  □ Travel                   │
-│  □ Personal Tasks           │
-│                             │
-│          [Continue]         │
-└──────────────┬──────────────┘
-               │
-               │ Discreet Entry
-               ▼
-┌─────────────────────────────┐
-│       TRAVEL ASSISTANCE     │
-│                             │
-│  Nearby assistance          │
-│  Available places           │
-│  Transport options          │
-│  Emergency support          │
-└─────────────────────────────┘
-```
-
-The **visible identity** is neutral, while the protected workflow provides access to assistance.
-
----
-
-# 🕵️ What Does "Discreet" Mean?
-
-The project considers multiple layers of exposure.
-
-### 1. Neutral App Identity
-
-The application should avoid sensitive branding such as:
-
-* "Domestic Violence"
-* "Women's Shelter"
-* "Emergency Shelter"
-
-Instead, the visible identity can use a neutral utility concept.
-
----
-
-### 2. Neutral App Icon
-
-The icon should not visually indicate:
-
-* Domestic violence
-* Abuse
-* Shelters
-* Emergency services
-
-It should resemble an ordinary utility application.
-
----
-
-### 3. Neutral Landing Page
-
-The first screen should not immediately display:
-
-> "Find a Domestic Violence Shelter"
-
-Instead, it presents a normal-looking utility interface.
-
----
-
-### 4. Neutral Page Metadata
-
-Sensitive terminology should be avoided in visible:
-
-* Page titles
-* Favicon
-* Interface labels
-* Notifications
-* Non-essential URLs
-* Search parameters
-
----
-
-### 5. Minimal Local Data
-
-The application should avoid unnecessarily storing:
-
-* Shelter searches
-* Exact locations
-* Route history
-* Sensitive user profiles
-* Search history inside the application
-
-Temporary information can be cleared when no longer required.
-
----
-
-# ⚠️ Important Privacy Limitation
-
-A web application **cannot guarantee that absolutely no trace exists on a monitored device**.
-
-For example, the application cannot fully control:
-
-* Browser history
-* DNS/network logs
-* Device monitoring software
-* Screenshots
-* Keyboard monitoring
-* ISP/network records
-* Operating-system backups
-
-Therefore, our technical goal is:
-
-> **To minimize application-generated traces and prevent the application's visible interface from revealing the sensitive purpose during ordinary inspection.**
-
-This makes the privacy claim realistic and technically defensible.
-
----
-
-# 🏠 REAL-TIME SHELTER AVAILABILITY
-
-Once the user discreetly enters the assistance workflow, the system can show participating shelters based on current availability.
-
-### Example
-
-```text
-Nearby Assistance
-
-┌─────────────────────────────┐
-│ Location A                  │
-│ Beds: AVAILABLE             │
-│ Distance: 3.2 km            │
-│ Status: OPEN                │
-│                             │
-│       [View Options]        │
-└─────────────────────────────┘
-
-┌─────────────────────────────┐
-│ Location B                  │
-│ Beds: LIMITED               │
-│ Distance: 5.1 km            │
-│ Status: OPEN                │
-│                             │
-│       [View Options]        │
-└─────────────────────────────┘
-```
-
-Shelter information should come from **authorized participating organizations**.
-
----
-
-# 🗺️ SAFER TRANSPORT OPTIONS
-
-Finding a shelter is only part of the problem.
-
-The platform also helps the user understand available transport options.
-
-Possible options include:
-
-* 🚕 Verified transport partners
-* 🚌 Public transportation
-* 🚗 Emergency transportation
-* 🚶 Walking options where appropriate
-* 📍 Trusted pickup locations
-
-The system can consider:
-
-* Distance
-* Available transport
-* Time
-* User-selected constraints
-
----
-
-# 🆘 EMERGENCY SUPPORT
-
-A quick-access emergency section can provide:
-
-* Emergency service information
-* Trusted contacts
-* Partner organizations
-* Immediate safety guidance
-* Relevant helplines
-
-The emergency workflow should require as few steps as practical.
-
----
-
-# 🔄 COMPLETE USER FLOW
-
-```text
-                 USER
-                   │
-                   ▼
-        ┌─────────────────────┐
-        │   Neutral Interface │
-        │   "Daily Utility"   │
-        └──────────┬──────────┘
-                   │
-             Discreet Entry
-                   │
-                   ▼
-        ┌─────────────────────┐
-        │ Protected Assistance│
-        │      Interface      │
-        └──────────┬──────────┘
-                   │
-          ┌────────┴─────────┐
-          ▼                  ▼
-   Shelter Search       Transport Search
-          │                  │
-          ▼                  ▼
-   Current Availability  Safer Options
-          │                  │
-          └────────┬─────────┘
-                   ▼
-           Emergency Support
-                   │
-                   ▼
-              SAFE ARRIVAL
 ```
 
 ---
 
-# 🧠 WHY THIS IS DIFFERENT
+## 🛠️ Technologies Used
 
-A traditional shelter directory answers:
+### Frontend
 
-> **"Where are shelters?"**
-
-Our system aims to answer:
-
-> **"Where might I be able to go right now, and how can I get there while minimizing the risk created by searching for help?"**
-
-The innovation is therefore not just a database of shelters.
-
-It combines:
-
-### **Disguise + Availability + Transport + Privacy**
-
----
-
-# 🏗️ SYSTEM ARCHITECTURE
-
-```text
-                         USER
-                          │
-                          ▼
-                ┌──────────────────┐
-                │  Neutral Frontend│
-                │   Discreet UI    │
-                └────────┬─────────┘
-                         │
-                   Secure Request
-                         │
-                         ▼
-                ┌──────────────────┐
-                │     BACKEND      │
-                │  Flask/FastAPI   │
-                └───────┬───┬──────┘
-                        │   │
-             ┌──────────┘   └──────────┐
-             ▼                         ▼
-     ┌───────────────┐        ┌────────────────┐
-     │ Shelter DB    │        │ Transport/Map  │
-     │               │        │ Service        │
-     └───────┬───────┘        └───────┬────────┘
-             │                        │
-             └───────────┬────────────┘
-                         ▼
-                ┌──────────────────┐
-                │ Assistance Engine│
-                └──────────────────┘
-```
-
----
-
-# 👥 USER ROLES
-
-## 👤 User
-
-Can:
-
-* Access the discreet interface
-* Find participating shelters
-* Check availability
-* View transport options
-* Access emergency resources
-
-No unnecessary personal account should be required for basic discovery.
-
----
-
-## 🏠 Shelter Administrator
-
-Can securely:
-
-* Log in
-* Update available beds
-* Update shelter status
-* Update operating information
-
----
-
-## 🛠️ System Administrator
-
-Can:
-
-* Verify participating organizations
-* Manage shelter accounts
-* Control permissions
-* Monitor system health
-
----
-
-# 🗄️ SHELTER DATABASE
-
-Example structure:
-
-```text
-Shelter
-│
-├── Shelter ID
-├── Organization
-├── Approximate Location
-├── Capacity
-├── Available Beds
-├── Operating Status
-├── Eligibility Information
-└── Last Updated
-```
-
-Sensitive shelter information should only be exposed where appropriate and where doing so does not create security risks for residents.
-
----
-
-# 🔐 SECURITY & PRIVACY
-
-Privacy is a **core architecture requirement**, not an additional feature.
-
-### Data Minimization
-
-Collect only information required for the service.
-
-### Secure Communication
-
-Use HTTPS/TLS for communication.
-
-### Role-Based Access
-
-Only authorized organizations can modify shelter availability.
-
-### Secure Authentication
-
-Administrative accounts should use secure authentication and password hashing.
-
-### No Sensitive Information in URLs
-
-Sensitive search terms, personal information, and exact locations should not be unnecessarily placed in URLs.
-
-### Minimal Logging
-
-Avoid storing sensitive searches or location history unless there is a clearly defined operational reason and appropriate safeguards.
-
----
-
-# 💻 TECHNOLOGY STACK
-
-## Frontend
-
-* HTML
-* CSS
+* HTML5
+* CSS3
 * JavaScript
-* React.js *(optional)*
-
-## Backend
-
-* Python
-* Flask / FastAPI
-
-## Database
-
-* PostgreSQL / MySQL
-
-## Maps
-
-* OpenStreetMap
-* Leaflet / MapLibre
-
-## Security
-
-* HTTPS
-* Secure sessions
-* Password hashing
-* Role-Based Access Control
+* Leaflet.js
+* Browser Geolocation API
+* Web Audio API
+* Speech Synthesis API
+* Local Storage
 
 ---
 
-# 📱 PROTOTYPE SCREENS
+## 📂 JavaScript Modules
 
-The hackathon prototype can contain:
+| File            | Purpose                                   |
+| --------------- | ----------------------------------------- |
+| `state.js`      | Stores application state and data         |
+| `calculator.js` | Calculator and secret-code access         |
+| `stealth.js`    | Siren, strobe and fake-call features      |
+| `gps.js`        | GPS and location handling                 |
+| `map.js`        | Interactive map and markers               |
+| `shelters.js`   | Shelter listing and filtering             |
+| `transit.js`    | Safe transportation and escort simulation |
+| `support.js`    | Support chat and assistance               |
+| `admin.js`      | Shelter availability management           |
+| `safety.js`     | SOS emergency functionality               |
+| `ui.js`         | Tabs, navigation and map fallback         |
 
-### Screen 1 — Neutral Interface
+---
+
+## ▶️ How to Run
+
+### Option 1 – Simple Frontend
+
+Open:
 
 ```text
-┌────────────────────────┐
-│    PERSONAL PLANNER    │
-│                        │
-│ Today's Schedule       │
-│ □ College              │
-│ □ Shopping             │
-│ □ Travel               │
-│                        │
-│       [Continue]       │
-└────────────────────────┘
+frontend/index.html
 ```
 
-### Screen 2 — Assistance
+in a browser.
+
+### Option 2 – Local Server
+
+Using VS Code, install **Live Server** and open:
 
 ```text
-┌────────────────────────┐
-│   TRAVEL ASSISTANCE    │
-│                        │
-│ Nearby Options         │
-│                        │
-│ ● Available            │
-│ ● Limited              │
-│                        │
-│ [View Options]         │
-└────────────────────────┘
+frontend/index.html
 ```
 
-### Screen 3 — Shelter Availability
+with Live Server.
+
+A local server is recommended because some browser features, especially GPS, work better through a server.
+
+---
+
+## 🔄 Application Flow
 
 ```text
-┌────────────────────────┐
-│    AVAILABLE OPTIONS   │
-│                        │
-│ Location A             │
-│ Available              │
-│ 3.2 km                 │
-│                        │
-│ Location B             │
-│ Limited                │
-│ 5.1 km                 │
-└────────────────────────┘
-```
-
-### Screen 4 — Transport
-
-```text
-┌────────────────────────┐
-│   TRANSPORT OPTIONS    │
-│                        │
-│ 🚕 Verified Transport  │
-│ 🚌 Public Transport    │
-│ 🚗 Emergency Transport │
-│                        │
-│ [Continue]             │
-└────────────────────────┘
+        ┌─────────────────┐
+        │   Calculator    │
+        │     Screen      │
+        └────────┬────────┘
+                 │
+          Secret Code
+                 │
+                 ▼
+        ┌─────────────────┐
+        │   SafeRoute     │
+        │     Portal      │
+        └────────┬────────┘
+                 │
+       ┌─────────┼─────────┐
+       ▼         ▼         ▼
+    Shelters    GPS       SOS
+       │         │         │
+       ▼         ▼         ▼
+     Map      Location   Guardians
+       │
+       ▼
+  Safe Transport
+       │
+       ▼
+  Shelter Arrival
 ```
 
 ---
 
-# 🌍 TARGET USERS
+## 🎯 Target Users
 
-The system is designed primarily for:
+The system is designed primarily for people who need discreet access to:
 
-* Domestic violence survivors
-* People trying to leave unsafe situations
-* Vulnerable individuals seeking emergency accommodation
-* NGOs
-* Shelter organizations
-* Social workers
-* Emergency-support organizations
+* Emergency shelters
+* Safe transportation
+* Location sharing
+* Trusted contacts
+* Emergency assistance
 
 ---
 
-# 🎯 IMPACT
+## 🔮 Future Scope
 
-The project aims to reduce:
+Possible future improvements include:
 
-* ⏱️ Time spent searching for help
-* ❓ Uncertainty about shelter availability
-* 🚶 Unnecessary travel between unavailable shelters
-* 🔎 Exposure created by obvious shelter searches
-* 📱 Dependence on scattered information
-
----
-
-# 🚀 FUTURE SCOPE
-
-## 🤖 AI-Assisted Route Information
-
-AI could help organize available transport and route information based on user-selected requirements.
+* Real-time shelter database
+* Verified shelter organizations
+* Live transport availability
+* Mobile application
+* Secure user authentication
+* Encrypted emergency communication
+* Multi-language support
+* AI-assisted safest-route suggestions
+* Weather and traffic alerts
+* Integration with emergency services
+* Multi-city and multi-state support
 
 ---
 
-## 📱 Mobile Application
+## ⚠️ Prototype Disclaimer
 
-A dedicated mobile application could provide faster access to the service.
+This project is a **hackathon prototype**.
 
----
+Shelter availability, GPS data, transportation, guardians, and emergency broadcasts shown in the current prototype may be simulated or locally stored.
 
-## 🌐 Multi-City Network
-
-Connect verified shelters across multiple cities and states.
+A production version would require verified shelter organizations, secure databases, privacy protections, reliable emergency-service integrations, and appropriate safety testing.
 
 ---
 
-## 🗣️ Multilingual Support
+## 👩‍💻 Project
 
-Support regional languages to improve accessibility.
-
----
-
-## 📡 Limited-Connectivity Support
-
-Provide essential information during poor network conditions.
+**Project Name:** HerHorizon – SafeRoute
+**Theme:** Safety & Technology
+**Type:** Hackathon Prototype
+**Platform:** Web Application
 
 ---
 
-## 🤝 NGO & Shelter Network
+## ❤️ Vision
 
-Build a verified network of:
+> **A safe way out should never depend on knowing where to look.**
 
-```text
-Shelters
-   +
-NGOs
-   +
-Transport Partners
-   +
-Emergency Support Organizations
-```
+HerHorizon aims to make critical safety information easier to access **discreetly, quickly, and securely**.
 
----
-
-# ⚠️ REAL-WORLD DEPLOYMENT
-
-This hackathon prototype is not a replacement for professional emergency services.
-
-A real deployment would require partnerships with:
-
-* Verified shelters
-* NGOs
-* Transport providers
-* Emergency organizations
-* Relevant authorities
-
-Shelter availability must be maintained by authorized organizations because incorrect information could create serious safety risks.
-
-The system must also carefully protect shelter locations and resident information.
-
----
-
-# 🏆 HACKATHON VALUE PROPOSITION
-
-### The Problem
-
-> **"I need somewhere safe to go, but I don't know where I can actually go right now."**
-
-### The Solution
-
-> **A discreet platform that connects people with participating shelters that may have current availability, along with transport and emergency-support information.**
-
-### The Innovation
-
-> **We don't only solve the problem of finding a shelter. We address the risk that searching for help can itself reveal someone's situation.**
-
----
-
-# 🔥 ONE-LINE PITCH
-
-> **"Find a safe place without making the search itself unsafe."**
-
----
-
-# 🎯 VISION
-
-### **No one should lose critical hours searching for a safe place when they are trying to escape danger.**
-
-**The Shelter Nobody Could Find in Time** aims to make emergency shelter discovery **faster, more discreet, privacy-conscious, and connected to real-world support.**
